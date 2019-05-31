@@ -37,9 +37,13 @@
       }
     });
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    const percentage = Math.round((numCorrect / myQuestions.length)*100) + '%';
+    resultsPercentage.innerHTML = `${percentage}`;
   }
   const quizContainer = document.getElementById("quiz");
   const resultsContainer = document.getElementById("results");
+  const resultsPercentage = document.getElementById("resultsPercentage");
+
   const submitButton = document.getElementById("submit");
   const myQuestions = [
     {
